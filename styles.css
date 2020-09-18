@@ -2,33 +2,69 @@ body, html{
   height:100%;
 }
 body{
-  background-image: url('starryStar.jpg');
-  background-repeat: no-repeat;
-  background-size: 1920px auto;
   margin: 0px;
   background-color:#444;
   font-size: 18px;
 }
+img.background-img{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  Z-index: -1;
+  clear: both;
+}
+
+img.foreground-img{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  Z-index: 1;
+  clear: both;
+} 
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: rgb(70, 130, 180);
 }
-.title, .button{
-  padding:5px 12px;
-  float:right;
+.title, .button-stars, .button-shootingStar, .button-airplane{
+  font-size: 2em;
+  padding:5px 20px;
+  position: relative;
+  text-decoration: none;
+  Z-index: 2; 
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: rgba(83,83,83,0.4);
+  margin: 20px;
 }
-.topbar{
-  height:32px;
-  background-color: #555;
+.images{
+  position: relative;
 }
-.title{
-  background-color: #777;
+.bar{
+  text-align: center;
+  top: 85%;
+  position: relative;
+  height: 32px;
+  Z-index: 2; 
 }
-.dot{
-  border: 20px solid #789;
-  border-radius:2px;
-  position:absolute;
+
+/* Sub-Classes */
+.dot {
+  border-style: solid;
+  border-color: #789;
+  border-radius: 2px;
+  position: absolute;
+  Z-index: 0;
 }
-/* 
+.stars{
+  border-style: solid;
+  border-color: #789;
+  border-radius: 2px;
+  position: absolute;
+  Z-index: 3;
+}
+.lowStars{
+  Z-index: 0;
+}
 .airplane{
-  border: 20px solid red;
-} */
+  border: 3px solid red;
+  position: absolute;
+} 
