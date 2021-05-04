@@ -53,9 +53,9 @@ $(document).ready(function() {
     }
     for (let i = 0; i < window.dots.length; i++) {
       var height = window.dots[i].css('top');
-      height = Number(String(height).slice(0, -2))
+      height = Number(String(height).slice(0, -2));
       if (height > 750) {
-        window.dots[i].addClass("lowStars");
+        window.dots[i].addClass('lowStars');
       }
     }
   });

@@ -5,7 +5,7 @@ var Star = function(top, left, timeBetweenSteps) {
   // assign the border size
   this.step();
   setInterval(()=>this.step(), timeBetweenSteps);
-  this.$node.addClass("stars");
+  this.$node.addClass('stars');
   this.$node.css('border-width', borderWidth + 'px');
   this.$node.css('border-radius', borderWidth + 'px');
 };
@@ -13,12 +13,12 @@ var Star = function(top, left, timeBetweenSteps) {
 Star.prototype = Object.create(Dot.prototype);
 Star.prototype.constructor = Star;
 
-Star.prototype.step = function(){
+Star.prototype.step = function() {
   // Dot.prototype.step.call(this, timeBetweenSteps);
   var currentColor = $('.stars').css('border-color');
   if (currentColor === 'rgb(255, 255, 255)') {
-    this.$node.css("border-color", "rgb(119, 136, 153)");
+    this.$node.css('border-color', 'rgb(119, 136, 153)');
   } else if (currentColor === 'rgb(119, 136, 153)') {
-    this.$node.css("border-color", "rgb(255, 255, 255)");
+    this.$node.css('border-color', 'rgb(255, 255, 255)');
   }
 };

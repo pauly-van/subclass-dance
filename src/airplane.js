@@ -11,7 +11,7 @@ Airplane.prototype.constructor = Airplane;
 
 Airplane.prototype.step = function() {
   // Dot.prototype.step.call(this, timeBetweenSteps);
-  var dirRadian = this.airplaneDir * Math.PI/180;
+  var dirRadian = this.airplaneDir * Math.PI / 180;
   var xIncrement = 10 * Math.cos(dirRadian);
   var yIncrement = 10 * Math.sin(dirRadian);
 
